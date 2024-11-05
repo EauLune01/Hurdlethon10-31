@@ -1,0 +1,10 @@
+services:
+  test:
+    build:
+      context: .
+      dockerfile: test.Dockerfile
+    command:
+      - /bin/sh
+      - -c
+      - |
+        python -m pytest --maxfail=1
